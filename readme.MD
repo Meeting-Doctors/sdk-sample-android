@@ -1,4 +1,21 @@
-# Videocall SDK - Integration Steps #
+# MeetingDoctors VideoCall SDK
+
+# INTEGRATION STEPS #
+
+**Table of contents**
+-----------------------
+- [ Gradle Integration Steps ](#gradle-integrations-steps)
+- [ Initialization ](#Initialization)
+- [ user Login ](#User-login)
+- [ Exposed methods ](#ProfessionalList-view)
+- [ 1to1 videocall implementation ](#1to1-videocall-implementation)
+- [ Firebase integration ](#Firebase-integration)
+- [ Push Notifications Firebase ](#push-notifications-firebase)
+- [ Customization ](#Customization)
+- [ Proguard settings ](#Proguard-resources)
+
+
+# Gradle Integration Steps #
 
 * Add repository. At Top Project's build.gradle file
 ``` gradle
@@ -15,7 +32,7 @@ repositories {
 implementation 'com.meetingdoctors:videocall-sdk:1.9.1'
 ```
 
-In order to check the last updates please check our changelog.
+In order to check the last updates please check our [ changelog ](https://bitbucket.org/meetingdoctors-team/videocall-sdk-sample-android/src/master/changelog.MD).
 
 ### Initialization ###
 
@@ -198,7 +215,7 @@ VideoCallClient.INSTANCE.login(
     }
 ```
 
-### Push Notifications for Apps with Firebase ###
+### Push Notifications Firebase ###
 * If your project has not Firebase dependency implemented, you need to declare it inside your app Build.gradle file:
 ``` gradle
 implementation "com.google.firebase:firebase-core:${FIREBASE_CORE_VERSION}"
