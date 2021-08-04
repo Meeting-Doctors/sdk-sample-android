@@ -1,0 +1,2 @@
+rootProject.name = "Sdk-videocall-integration-sample"
+include ':app'
