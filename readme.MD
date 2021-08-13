@@ -29,7 +29,7 @@ repositories {
 
 * Declare library in dependencies section. At app module gralde file
 ``` gradle
-implementation 'com.meetingdoctors:videocall-sdk:1.9.1'
+implementation 'com.meetingdoctors:videocall-sdk:1.10.0'
 ```
 
 In order to check the last updates please check our [ changelog ](https://bitbucket.org/meetingdoctors-team/videocall-sdk-sample-android/src/master/changelog.MD).

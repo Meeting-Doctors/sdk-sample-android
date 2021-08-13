@@ -13,3 +13,15 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+.idea/
+*.apk
+#*.iml
+*.aab
+*.pepk
+#.gradle
+output.json
+#/local.properties
+#.DS_Store
+#/build
+#/captures

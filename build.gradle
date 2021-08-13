@@ -3,11 +3,16 @@ buildscript {
     ext.kotlin_version = "1.5.10"
     repositories {
         google()
+        gradlePluginPortal()
         mavenCentral()
+        maven { url "https://meetingdoctors.jfrog.io/artifactory/Android/" }
+        maven { url "https://jitpack.io" }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.2.1"
+        classpath "com.android.tools.build:gradle:3.6.4"
+        classpath 'com.google.gms:google-services:4.3.10'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.7.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -18,7 +23,10 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+        gradlePluginPortal()
+//        jcenter() // Warning: this repository is going to shut down soon
+        maven { url "https://meetingdoctors.jfrog.io/artifactory/Android/" }
+        maven { url 'https://search.maven.org/artifact/com.opentok.android/opentok-android-sdk' }
     }
 }
 

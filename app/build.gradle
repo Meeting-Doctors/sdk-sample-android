@@ -1,6 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -15,9 +19,24 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        Properties properties = new Properties()
+        if (project.rootProject.file('local.properties').canRead()) {
+            properties.load(project.rootProject.file("local.properties").newDataInputStream())
+        } else {
+            throw new FileNotFoundException("Could not read local.properties!")
+        }
+
+        buildConfigField 'String', "YOUR_API_KEY", properties.getProperty("API_KEY")
+        buildConfigField 'String', "YOUR_TOKEN", properties.getProperty("USER_TOKEN")
     }
 
     buildTypes {
+
+        debug {
+            debuggable true
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -34,10 +53,33 @@ android {
 
 dependencies {
 
+    implementation 'com.meetingdoctors:customer-chat-sdk:1.23.0'
+    implementation 'com.meetingdoctors:videocall-sdk:1.10.0'
+    implementation 'com.meetingdoctors:meetingdoctors-security-sdk:1.1.0'
+
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:26.1.1')
+
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    //   implementation 'com.google.firebase:firebase-analytics-ktx'
+
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
+
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
