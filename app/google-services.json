@@ -1,0 +1,451 @@
+{
+  "project_info": {
+    "project_number": "621185962022",
+    "firebase_url": "https://meetingdoctors-b3aa1.firebaseio.com",
+    "project_id": "meetingdoctors-b3aa1",
+    "storage_bucket": "meetingdoctors-b3aa1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:3a011e2df921e114",
+        "android_client_info": {
+          "package_name": "com.mediquo.doctors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:aa1d4159570df3aa2e56e7",
+        "android_client_info": {
+          "package_name": "com.meetingdoctors.chatmedico"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:aa404f3787b78c642e56e7",
+        "android_client_info": {
+          "package_name": "com.meetingdoctors.demochatmedico"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:8059cdf7c4e52ffb2e56e7",
+        "android_client_info": {
+          "package_name": "com.meetingdoctors.example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:437cf4584b3001252e56e7",
+        "android_client_info": {
+          "package_name": "com.meetingdoctors.marcablancamarc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:d079f972acd5401d2e56e7",
+        "android_client_info": {
+          "package_name": "com.meetingdoctors.professionals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:5f3e98cf6fdcbd3a2e56e7",
+        "android_client_info": {
+          "package_name": "com.meetingdoctors.sample.videocall.example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-6e3om7fs7l90mjmjn0aamqbl5pf92dt2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.meetingdoctors.sample.videocall.example",
+            "certificate_hash": "564357c62158d8e2c60a7d67d54e96faff98f161"
+          }
+        },
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:aff0c28f90d0accd2e56e7",
+        "android_client_info": {
+          "package_name": "com.meetingdoctors.samplefirebase.webview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:0a2693d1681efc342e56e7",
+        "android_client_info": {
+          "package_name": "com.meetingdoctors.sdk_videocall_integration_sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:4ac692f8c9d3fb662e56e7",
+        "android_client_info": {
+          "package_name": "com.meetingdoctors.widgetcommunication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:aa5f90ad94d007492e56e7",
+        "android_client_info": {
+          "package_name": "com.meetingdoctors.workplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621185962022:android:245e06a1af7137202e56e7",
+        "android_client_info": {
+          "package_name": "com.testmd.meetingd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBgyFnJbeVagp2bVFxdZsgb48MaaJRDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621185962022-thjneo8kdnfauaubttb70nprde2hvnl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621185962022-0b41onoo3n4818a75d419b8vg8koog5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meetingdoctors.chat.medico"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
