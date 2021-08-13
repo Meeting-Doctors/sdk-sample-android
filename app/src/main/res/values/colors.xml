@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color tools:override= "true" name="colorPrimary">#00BAF3</color>
+    <color tools:override= "true" name="colorPrimaryDark">#1a2e4c</color>
+    <!-- color for bottom background precall activity -->
+    <color name="colorPrimaryLight">#c0e9f8</color>
+    <color tools:override= "true" name="colorAccent">#0059A6</color>
+
+    <!-- MEDIQUO -->
+    <color name="meetingdoctors_base_color">#00BAF3</color>
+    <color name="meetingdoctors_text_base_color">@android:color/white</color>
+    <color name="meetingdoctors_speciality_color">@color/colorAccent</color>
+    <color name="meetingdoctors_chat_unread_messages_count_bg_color">@color/colorAccent</color>
+    <color name="meetingdoctors_notification_color">#00BAF3</color>
+    <color name="meetingdoctors_doctor_information_header_description_color">@color/colorAccent</color>
+    <!-- MEDIQUO -->
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
