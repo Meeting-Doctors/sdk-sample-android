@@ -5,22 +5,32 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.meetingdoctors.chat.MeetingDoctorsClient.Companion.instance
 import com.meetingdoctors.sdk_videocall_integration_sample.ui.activity.MainActivity
+import com.meetingdoctors.videocall.fcm.MDVideoCallFirebaseMessagingService.Companion.onMessageReceived
 
-class VideocallFirebaseMessaging: FirebaseMessagingService() {
+class VideocallFirebaseMessaging : FirebaseMessagingService() {
 
-    override fun onMessageReceived(p0: RemoteMessage) {
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
         Log.i("FCM", "onMessageReceived() Push received on app")
-        super.onMessageReceived(p0)
+        super.onMessageReceived(remoteMessage)
 
-        instance!!.onFirebaseMessageReceived(
-            p0,
-            MainActivity::class.java
-        )
+        try {
+            instance?.onFirebaseMessageReceived(
+                remoteMessage,
+                MainActivity::class.java
+            )
+        } catch (e: Exception) {
+            Log.e("MDFirebaseMessage", "Firebase Exception : " + e.message)
+        }
+
+        try {
+            onMessageReceived(remoteMessage, this.applicationContext)
+        } catch (e: Exception) {
+            Log.e("VCFirebaseMessage", "Firebase Exception : " + e.message)
+        }
     }
 
-    override fun onNewToken(p0: String) {
+    override fun onNewToken(token: String) {
         Log.i("FCM", "onNewToken() New token received on app")
-        super.onNewToken(p0)
-        instance!!.onNewTokenReceived(p0)
+        super.onNewToken(token)
     }
 }

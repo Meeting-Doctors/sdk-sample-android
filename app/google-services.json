@@ -304,7 +304,7 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:621185962022:android:0a2693d1681efc342e56e7",
+        "mobilesdk_app_id": "1:621185962022:android:06b461fbf0ec3efd2e56e7",
         "android_client_info": {
           "package_name": "com.meetingdoctors.sdk_videocall_integration_sample"
         }
