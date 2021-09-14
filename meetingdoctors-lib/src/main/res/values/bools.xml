@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name ="meetingdoctors_show_invitation_code_container">false</bool>
+</resources>

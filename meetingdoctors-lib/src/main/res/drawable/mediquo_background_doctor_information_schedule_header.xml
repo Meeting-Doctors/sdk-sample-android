@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <item >
+        <shape android:shape="rectangle"  >
+            <corners
+                android:topRightRadius="10dip"
+                android:topLeftRadius="10dip" />
+            <solid
+                android:color="@color/meetingdoctors_doctor_information_header_schedule_color"
+                tools:color="@color/meetingdoctors_blue"
+                />
+        </shape>
+    </item>
+</selector>

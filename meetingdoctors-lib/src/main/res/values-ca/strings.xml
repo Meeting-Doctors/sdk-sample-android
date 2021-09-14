@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">MeetingDoctors</string>
+    <string name="meetingdoctors_locale">ca</string>
+
+    <string name="meetingdoctors_collegiate_number">Nº Col·legiat</string>
+
+    <string name="meetingdoctors_home_schedule_1">Disponible fins les %1$s</string>
+    <string name="meetingdoctors_home_schedule_2">Em connectaré avui a les %1$s</string>
+    <string name="meetingdoctors_home_schedule_3">Em connectaré demà a les %1$s</string>
+    <string name="meetingdoctors_home_schedule_4">Em connectaré el %1$s a les %2$s</string>
+
+    <string name="meetingdoctors_doctor_schedule_title">Horari</string>
+    <string name="meetingdoctors_doctor_schedule_1">%1$s: de %2$s a %3$s</string>
+    <string name="meetingdoctors_doctor_schedule_2">%1$s: de %2$s a %3$s i de %4$s a %5$s</string>
+    <string name="meetingdoctors_doctor_schedule_3">De dilluns a divendres de %2$s a %3$s</string>
+    <string name="meetingdoctors_doctor_schedule_4">De dilluns a divendres de %2$s a %3$s i de %4$s a %5$s</string>
+    <string name="meetingdoctors_doctor_schedule_not_available">Horari no disponible</string>
+    <string name="meetingdoctors_doctor_description_title">Descripció</string>
+
+    <string name="meetingdoctors_chat_write_message_hint">Escriu aquí…</string>
+    <string name="meetingdoctors_chat_send">Enviar</string>
+    <string name="meetingdoctors_chat_writing">Escrivint…</string>
+    <string name="meetingdoctors_chat_send_vc_automessage">Hola %s, m\'agradaria comentar-te una cosa. ¿Podries fer-me una video trucada si us plau?</string>
+    <string name="meetingdoctors_chat_request_videocall">Sol.licitar Videotrucada</string>
+    <string name="meetingdoctors_chat_cancel_videocall">Cancel·la la sol·licitud de videotrucada</string>
+    <string name="meetingdoctors_chat_cancelled_vc_automessage">He cancel.lat la videotrucada</string>
+    <string name="meetingdoctors_chat_offline_alert">Ara mateix no estic disponible, pots deixar-me un missatge i et respondré quan em torni a connectar.</string>
+    <string name="meetingdoctors_chat_delete_messages">Eliminar missatges</string>
+    <string name="meetingdoctors_chat_attachment_canceled">Cap arxiu afegit.</string>
+    <string name="meetingdoctors_chat_pick_file_app_title">Seleccionar Aplicació</string>
+
+    <string name="meetingdoctors_chat_clear_dialog_title">Eliminar missatges</string>
+    <string name="meetingdoctors_chat_clear_dialog_body">Estàs a punt d\'eliminar tots els missatges d\'aquesta conversa, ¿Desitges continuar?</string>
+    <string name="meetingdoctors_dialog_accept">Acceptar</string>
+    <string name="meetingdoctors_dialog_cancel">Cancel·lar</string>
+
+    <string name="meetingdoctors_chat_invitation_code_message">Per poder veure als teus professionals has de \ntener un codi d\'invitació. Si no el tens \nencara posa\'t en contacte amb ells per \nsolicitar-lo.</string>
+    <string name="meetingdoctors_chat_invitation_code_dialog_title">Introdueix un codi d\'invitació</string>
+    <string name="meetingdoctors_chat_invitation_code_dialog_hint_text">Codi</string>
+    <string name="meetingdoctors_chat_invitation_code_dialog_accept_option_text">Enviar</string>
+    <string name="meetingdoctors_chat_invitation_code_dialog_cancel_option_text">Sortir</string>
+
+    <string name="meetingdoctors_not_connected">No hi ha connexió</string>
+
+    <string name="meetingdoctors_push_unread_messages">Tens missatge nous sense llegir</string>
+
+    <string name="meetingdoctors_medical_history_title">Historial mèdic</string>
+    <string name="meetingdoctors_medical_history_save">Desa</string>
+    <string name="meetingdoctors_medical_history_delete">Eliminar</string>
+    <string name="meetingdoctors_medical_history_cancel">Cancel·lar</string>
+    <string name="meetingdoctors_medical_history_required">Aquest camp és obligatori</string>
+    <string name="meetingdoctors_medical_history_delete_confirmation">Estàs segur que desitges eliminar aquest element?</string>
+    <string name="meetingdoctors_medical_history_description">Aquest és el teu historial mèdic, on tant tu com el teu metge podeu afegir i modificar contingut. És important tenir-lo actualitzat per poder ajudar-te millor.</string>
+    <string name="meetingdoctors_medical_history_my_documents">Els meus documents</string>
+    <string name="meetingdoctors_medical_history_documents_description">Aquests són tots els teus documents. Aquí trobaràs informes i altres documents que es puguin generar quan interaccionis amb els diferents professionals.</string>
+
+    <string name="meetingdoctors_medical_history_allergies">Al·lèrgies</string>
+    <string name="meetingdoctors_medical_history_add_allergy_empty_info">No has afegit\ncap al·lèrgia</string>
+    <string name="meetingdoctors_medical_history_add_allergy_button">AFEGEIX AL·LÈRGIA</string>
+    <string name="meetingdoctors_medical_history_allergies_description">Aquesta és la llista de les teves al·lèrgies, on tant tu com el teu metge podeu afegir i modificar contingut. Procura mantenir-la actualitzada per agilitzar les consultes amb els professionals.</string>
+    <string name="meetingdoctors_medical_history_allergy_title">Al·lèrgia</string>
+    <string name="meetingdoctors_medical_history_allergy_name_hint">Nom de l\'al·lergen*\n(ex.: pol·len)</string>
+    <string name="meetingdoctors_medical_history_allergy_details_hint">Detalls</string>
+    <string name="meetingdoctors_medical_history_allergy_severity">Gravetat:</string>
+
+    <string name="meetingdoctors_medical_history_diseases">Malalties</string>
+    <string name="meetingdoctors_medical_history_add_diseases_empty_info">No has afegit\ncap malaltia</string>
+    <string name="meetingdoctors_medical_history_add_diseases_button">AFEGEIX MALALTIA</string>
+    <string name="meetingdoctors_medical_history_diseases_description">Aquesta és la llista de les teves malalties, on tant tu com el teu metge podeu afegir i modificar contingut. Procura mantenir-la actualitzada per agilitzar les consultes amb els professionals.</string>
+    <string name="meetingdoctors_medical_history_disease_title">Malaltia</string>
+    <string name="meetingdoctors_medical_history_disease_name_hint">Nom de la malaltia*\n(ex.: hipertensió)</string>
+    <string name="meetingdoctors_medical_history_disease_diagnosis_date">Data del diagnòstic</string>
+    <string name="meetingdoctors_medical_history_disease_diagnosis_date_prefix">Diagnosticat el:</string>
+    <string name="meetingdoctors_medical_history_disease_resolution_date">Data de resolució</string>
+    <string name="meetingdoctors_medical_history_disease_resolution_date_prefix">Resolt el:</string>
+
+    <string name="meetingdoctors_medical_history_medications">Medicació</string>
+    <string name="meetingdoctors_medical_history_add_medication_empty_info">No has afegit\ncap medicació</string>
+    <string name="meetingdoctors_medical_history_add_medication_button">AFEGEIX MEDICACIÓ</string>
+    <string name="meetingdoctors_medical_history_medications_description">Aquesta és la llista de les medicines que estàs prenent a l\'actualitat, on tant tu com el teu metge podeu afegir i modificar contingut. Procura mantenir-la actualitzada per agilitzar les consultes amb els professionals.</string>
+    <string name="meetingdoctors_medical_history_medication_title">Medicació</string>
+    <string name="meetingdoctors_medical_history_medication_name_hint">Nom del medicament*\n(ex.: paracetamol)</string>
+    <string name="meetingdoctors_medical_history_medication_posology_hint">Posologia* (ex.: 200 mg cada 8 hores)</string>
+
+    <string name="meetingdoctors_medical_history_prescriptions">Les meves receptes electròniques</string>
+    <string name="meetingdoctors_medical_history_prescriptions_medication_plan">Pla de medicació</string>
+    <string name="meetingdoctors_medical_history_prescriptions_date">Actualitzat: %1$s a less %2$s</string>
+    <string name="meetingdoctors_medical_history_prescriptions_description">En aquest apartat podràs consultar les teves receptes. Podràs visualitzar-les prement sobre el teu pla de medicació o descarregar-les per poder consultar-les en qualsevol moment</string>
+    <string name="meetingdoctors_medical_history_prescriptions_download_success">El teu pla de medicació s\'ha descarregat correctament, el trobaràs a la carpeta Descàrregues del teu dispositiu.</string>
+    <string name="meetingdoctors_medical_history_prescriptions_download_error">No s\'ha pogut descarregar el teu pla de medicació, torna a provar-ho passats uns minuts.</string>
+    <string name="meetingdoctors_medical_history_prescription_empty">Encara no tens una recepta</string>
+    <string name="meetingdoctors_medical_history_prescription_error">Hi ha hagut un error a l\'obtenir la teva recepta, intenta-ho més tard.</string>
+    <string name="meetingdoctors_medical_history_prescriptions_file_name">%1$s_pla de medicació.pdf</string>
+
+    <string name="meetingdoctors_medical_history_referrals">Derivacions</string>
+    <string name="meetingdoctors_medical_history_referral_description">Aquesta és la llista de derivacions generades pels metges.</string>
+    <string name="meetingdoctors_medical_history_add_referral_empty_info">Encara no tens\ncap derivació</string>
+
+    <string name="meetingdoctors_banned_dialog_title">Usuari Bloquejat</string>
+    <string name="meetingdoctors_banned_dialog_body">El teu usuari ha estat bloquejat per incompliment dels termes i condicions del servei. Per a qualsevol consulta o reclamació envia un correu electrònic a info@meetingdoctors.com</string>
+    <string name="meetingdoctors_banned_dialog_button">Acceptar</string>
+
+    <string name="meetingdoctors_notification_channel_medical_chat">Xat Mèdic</string>
+
+    <string name="meetingdoctors_professional_empty_list_message">Per poder veure als teus metges de confiança, heu de tenir un codi d\'invitació proporcionat per ells mateixos (exemple 12B34). Aquest codi és diferent a què has rebut per sms al donar-te d\'alta a l\'app. Si no el tens encara, posa\'t en contacte amb el teu metge per sol·licitar-ho.</string>
+    <string name="meetingdoctors_professional_list_invitation_code">Introduir codi d\'invitació</string>
+
+    <string name="meetingdoctors_no_app_found_open_pdf">No hi ha cap aplicació per obrir el pdf</string>
+
+    <string name="meetingdoctors_settings">Configuració</string>
+    <string name="meetingdoctors_edit_permissions_write_external">El permís d\'emmagatzematge està desactivat, ves a configuració i activa\'l.</string>
+
+    <!-- medical prescription provider -->
+    <string name="medical_prescription_provider_title">I si… t\'ho portem a casa?</string>
+    <string name="medical_prescription_provider_message">El nostre servei a domicili va per tu a la farmàcia. Per a més informació truca a l\'91.769.04.10</string>
+
+</resources>

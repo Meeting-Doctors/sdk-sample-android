@@ -28,8 +28,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_main_activity)
 
-        MeetingDoctorsManager.authenticateCustomerSDK(BuildConfig.YOUR_TOKEN)
-
         /**
          * Integrator can listen for some useful callbacks
          */

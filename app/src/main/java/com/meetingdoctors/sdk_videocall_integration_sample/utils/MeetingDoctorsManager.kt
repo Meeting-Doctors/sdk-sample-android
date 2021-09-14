@@ -27,6 +27,7 @@ object MeetingDoctorsManager {
             )
 
             MeetingDoctorsClient.instance?.setCollegiateNumbersVisibility(true)
+
         }
     }
 
@@ -83,16 +84,4 @@ object MeetingDoctorsManager {
         )
     }
 
-    fun authenticateCustomerSDK(userToken: String?) {
-        MeetingDoctorsClient.instance?.authenticate(userToken = userToken,
-            authenticationListener = object : MeetingDoctorsClient.AuthenticationListener {
-                override fun onAuthenticated() {
-                    Log.i("Authenticate", "Authenticate succesful")
-                }
-
-                override fun onAuthenticationError(throwable: Throwable) {
-                    Log.e("Authenticate()", "Exception: ${throwable.localizedMessage}")
-                }
-            })
-    }
 }

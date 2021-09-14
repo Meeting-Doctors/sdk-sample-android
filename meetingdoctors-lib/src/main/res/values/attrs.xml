@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <declare-styleable name="ProfessionalList">
+        <attr name="includedSpecialities">
+            <flag name="generalMedicine" value="1"/>
+            <flag name="pediatrics" value="2"/>
+            <flag name="psychology" value="4"/>
+            <flag name="sportsMedicine" value="8"/>
+            <flag name="customerCare" value="16"/>
+            <flag name="medicalSupport" value="32"/>
+            <flag name="personalTraining" value="64"/>
+            <flag name="commercial" value="128"/>
+            <flag name="medicalAppointment" value="256"/>
+            <flag name="cardiology" value="512"/>
+            <flag name="gynecology" value="1024"/>
+            <flag name="pharmacy" value="2048"/>
+            <flag name="sexology" value="4096"/>
+            <flag name="nutrition" value="8192"/>
+            <flag name="fertilityConsultant" value="16384"/>
+            <flag name="nursing" value="32768"/>
+            <flag name="healthAdvisor" value="65536"/>
+            <flag name="customerCareISaludInfo" value="131072"/>
+        </attr>
+        <attr name="excludedSpecialities">
+            <flag name="generalMedicine" value="1"/>
+            <flag name="pediatrics" value="2"/>
+            <flag name="psychology" value="4"/>
+            <flag name="sportsMedicine" value="8"/>
+            <flag name="customerCare" value="16"/>
+            <flag name="medicalSupport" value="32"/>
+            <flag name="personalTraining" value="64"/>
+            <flag name="commercial" value="128"/>
+            <flag name="medicalAppointment" value="256"/>
+            <flag name="cardiology" value="512"/>
+            <flag name="gynecology" value="1024"/>
+            <flag name="pharmacy" value="2048"/>
+            <flag name="sexology" value="4096"/>
+            <flag name="nutrition" value="8192"/>
+            <flag name="fertilityConsultant" value="16384"/>
+            <flag name="nursing" value="32768"/>
+            <flag name="healthAdvisor" value="65536"/>
+            <flag name="customerCareISaludInfo" value="131072"/>
+        </attr>
+        <attr name="enableSwipeRefresh" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="IndicatorRatingBar">
+        <!--        <attr name="selectable" format="boolean" />-->
+        <!--        <attr name="indicatorTitle" format="string" />-->
+        <!--        <attr name="indicatorPosition" format="enum">-->
+        <!--            <enum name="indicatorUp" value="0" />-->
+        <!--            <enum name="indicatorDown" value="1" />-->
+        <!--        </attr>-->
+        <attr name="rateType" format="enum">
+            <enum name="numeric" value="0" />
+            <enum name="star" value="1" />
+        </attr>
+        <!--        <attr name="minRate" format="integer" />-->
+        <!--        <attr name="maxRate" format="integer" />-->
+        <!--        <attr name="selectedRate" format="integer" />-->
+    </declare-styleable>
+</resources>

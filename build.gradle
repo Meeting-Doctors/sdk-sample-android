@@ -1,6 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext.kotlin_version = "1.5.10"
+    ext.junitPlatformVersion = '1.0.2'
+    ext.androidJunit5Version = '1.0.22'
     repositories {
         google()
         gradlePluginPortal()

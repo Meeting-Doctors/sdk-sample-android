@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="indicator_rating_bar_item_ids">
+        <item>rating_position_0</item>
+        <item>rating_position_1</item>
+        <item>rating_position_2</item>
+        <item>rating_position_3</item>
+        <item>rating_position_4</item>
+        <item>rating_position_5</item>
+        <item>rating_position_6</item>
+        <item>rating_position_7</item>
+        <item>rating_position_8</item>
+        <item>rating_position_9</item>
+        <item>rating_position_10</item>
+    </string-array>
+
+    <string-array name="indicator_rating_bar_item_colors">
+        <item>@string/nps_dialog_negative_nps_valoration_segment</item>
+        <item>@string/nps_dialog_negative_nps_valoration_segment</item>
+        <item>@string/nps_dialog_negative_nps_valoration_segment</item>
+        <item>@string/nps_dialog_negative_nps_valoration_segment</item>
+        <item>@string/nps_dialog_negative_nps_valoration_segment</item>
+        <item>@string/nps_dialog_negative_nps_valoration_segment</item>
+        <item>@string/nps_dialog_negative_nps_valoration_segment</item>
+        <item>@string/nps_dialog_moderate_nps_valoration_segment</item>
+        <item>@string/nps_dialog_moderate_nps_valoration_segment</item>
+        <item>@string/nps_dialog_positive_nps_valoration_segment</item>
+        <item>@string/nps_dialog_positive_nps_valoration_segment</item>
+    </string-array>
+</resources>

@@ -1,0 +1,184 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: rootProject.file('gradle/dependencies.gradle')
+apply from: rootProject.file('gradle/configuration.gradle')
+
+def libraryFileName = "${project.getName()}-release-${VERSION_NAME}"
+
+android {
+    compileSdkVersion configuration.compileSdkVersion
+    buildToolsVersion configuration.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion configuration.minSdkVersion
+        targetSdkVersion configuration.targetSdkVersion
+        versionCode configuration.versionCode
+        versionName configuration.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+
+        Properties properties = new Properties()
+        if (project.rootProject.file('local.properties').canRead()) {
+            properties.load(project.rootProject.file("local.properties").newDataInputStream())
+        } else {
+            throw new FileNotFoundException("Could not read local.properties!")
+        }
+
+        buildConfigField 'String', "CA_MEDIPREMIUM", properties.getProperty("medipremiumCert1dev")
+        buildConfigField 'String', "CA_MD_1_DEV", properties.getProperty("customerMDcert1dev")
+        buildConfigField 'String', "CA_MD_2_DEV", properties.getProperty("customerMDcert2dev")
+        buildConfigField 'String', "CA_MD_3_DEV", properties.getProperty("customerMDcert3dev")
+        buildConfigField 'String', "CA_MD_4_DEV", properties.getProperty("customerMDcert3dev")
+        buildConfigField 'String', "CA_MD_1_STAGING", properties.getProperty("customerMDcert1staging")
+        buildConfigField 'String', "CA_MD_2_STAGING", properties.getProperty("customerMDcert2staging")
+        buildConfigField 'String', "CA_MD_3_STAGING", properties.getProperty("customerMDcert3staging")
+        buildConfigField 'String', "CA_MD_1", properties.getProperty("customerMDcert1prod")
+        buildConfigField 'String', "CA_MD_2", properties.getProperty("customerMDcert2prod")
+        buildConfigField 'String', "CA_MD_3", properties.getProperty("customerMDcert3prod")
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        staging {
+            debuggable true
+        }
+        preRelease {
+            resourcePrefix "meetingdoctors_"
+            debuggable true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            resourcePrefix "meetingdoctors_"
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/unit-test/kotlin'
+        test.java.srcDirs += 'src/integration-test/kotlin'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "${libraryFileName}.aar"
+        }
+    }
+}
+
+dependencies {
+
+    ext.dagger_version = '2.27'
+    ext.lifecycle_version = '2.2.0'
+    ext.karumi_version = '5.0.0'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Android core
+    implementation libraries.android.kotlin
+    implementation libraries.android.support.compat
+    implementation libraries.android.support.constraint
+    implementation libraries.android.support.annotations
+    implementation libraries.android.support.cardview
+    implementation libraries.android.support.design
+    implementation libraries.android.support.recyclerview
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation "com.google.android.material:material:1.3.0"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+
+    // Google
+    implementation libraries.google.play.gcm
+
+    // Glide
+    implementation libraries.glide
+    annotationProcessor libraries.glide
+
+    // RX
+    implementation libraries.rx.java
+    implementation libraries.rx.android
+    implementation libraries.rx.kotlin
+
+    implementation platform(libraries.google.firebase.bom)
+    implementation libraries.google.firebase.messaging
+
+    // Square - Retrofit & OkHttp
+    implementation libraries.square.okhttp.core
+    implementation libraries.square.okhttp.logging
+    implementation libraries.square.retrofit.core
+    implementation libraries.square.retrofit.converter_moshi
+    implementation libraries.square.retrofit.rx_adapter
+
+    implementation "com.squareup.moshi:moshi-kotlin:${versions.square.moshi}"
+
+    implementation libraries.google.gson
+    implementation('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
+    implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
+    api 'com.meetingdoctors:meetingdoctors-security-sdk:1.1.0'
+
+//    api project(path: ':mdsecure')
+
+    // UNIT TESTS
+
+    // Core
+    testImplementation libraries.test.junit
+    testImplementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    testImplementation "org.junit.platform:junit-platform-engine:${junitPlatformVersion}"
+    testImplementation "org.junit.platform:junit-platform-runner:${junitPlatformVersion}"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.2'
+    testImplementation libraries.test.mockito_core
+    testImplementation libraries.test.hamkrest
+    testImplementation libraries.test.mockito_kotlin
+
+    // Spek
+    testImplementation("org.jetbrains.spek:spek-api:1.1.5") {
+        exclude group: "org.jetbrains.kotlin"
+    }
+    testImplementation("org.jetbrains.spek:spek-junit-platform-engine:1.1.5") {
+        exclude group: "org.junit.platform"
+        exclude group: "org.jetbrains.kotlin"
+    }
+
+    // INSTRUMENTATION TESTS
+
+    androidTestImplementation libraries.android.support.test.espresso
+
+    //Android lifecycle
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    //Dexter for runtime permissions
+    implementation "com.karumi:dexter:$karumi_version"
+
+}

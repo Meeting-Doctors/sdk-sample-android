@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.meetingdoctors.chat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application>
+        <activity
+            android:name=".activities.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.DoctorProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme" />
+        <activity
+            android:name=".activities.ImageViewerActivity"
+            android:screenOrientation="sensor"
+            android:theme="@style/MediQuoWhiteTheme" />
+        <activity
+            android:name=".activities.medicalhistory.MedicalHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme" />
+        <activity
+            android:name=".activities.medicalhistory.AllergiesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme" />
+        <activity
+            android:name=".activities.medicalhistory.documents.MyDocumentsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme" />
+        <activity android:name=".activities.medicalhistory.prescription.MedicalPrescriptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme"/>
+        <activity
+            android:name=".activities.medicalhistory.AllergyDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme" />
+        <activity
+            android:name=".activities.medicalhistory.DiseasesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme" />
+        <activity
+            android:name=".activities.medicalhistory.DiseaseDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme" />
+        <activity
+            android:name=".activities.medicalhistory.MedicationsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme" />
+        <activity
+            android:name=".activities.medicalhistory.MedicationDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme" />
+        <activity
+            android:name=".activities.medicalhistory.ReportsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme" />
+        <activity
+            android:name=".activities.medicalhistory.ReferralsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediQuoWhiteTheme" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"
+                tools:replace="android:resource"/>
+        </provider>
+
+    </application>
+
+</manifest>
