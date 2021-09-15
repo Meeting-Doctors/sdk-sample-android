@@ -1,6 +1,10 @@
 CHANGELOG
 ------------------------
 
+## 1.10.0 (16 Jul 2021)
+#### Added
+    - Update Android target to Api 30
+
 ## 1.9.1 (18 Jun 2021)
 #### Added
     - add missing UseCase class
