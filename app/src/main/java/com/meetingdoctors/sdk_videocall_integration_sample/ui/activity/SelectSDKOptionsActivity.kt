@@ -30,7 +30,7 @@ class SelectSDKOptionsActivity : AppCompatActivity() {
     private fun onVideocallButtonPressed() {
         includedLoader?.visibility = View.VISIBLE
         initializeSDKAndRegisterPushToken(onSuccess = {
-            MeetingDoctorsManager.initVideocallSDK(this)
+            MeetingDoctorsManager.initVideocallSDK(this, makeVideocallRequest = true)
 
         }, onError = {
             includedLoader?.visibility = View.GONE
@@ -45,7 +45,6 @@ class SelectSDKOptionsActivity : AppCompatActivity() {
         initializeSDKAndRegisterPushToken(onSuccess = {
             val intent: Intent = MainActivity.getIntent(this)
             this.startActivity(intent)
-
         }, onError = {
             includedLoader?.visibility = View.GONE
             Toast.makeText(this, "Authenticate Error", Toast.LENGTH_LONG).show()
