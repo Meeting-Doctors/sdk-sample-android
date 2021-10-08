@@ -1,7 +1,0 @@
-<resources>
-    <dimen name="meetingdoctors_title_bar_height">60dp</dimen>
-    <dimen name="meetingdoctors_title_bar_elevation">2dp</dimen>
-
-    <dimen name="meetingdoctors_margin_small">8dp</dimen>
-    <dimen name="meetingdoctors_margin">16dp</dimen>
-</resources>

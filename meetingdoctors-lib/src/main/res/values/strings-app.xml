@@ -1,6 +1,0 @@
-<resources>
-    <string name="meetingdoctors_local_broadcast_gcm_message_received" translatable="false">gcm_message_received</string>
-    <string name="meetingdoctors_local_broadcast_chat_events" translatable="false">com.meetingdoctors.event.chat</string>
-    <string name="meetingdoctors_local_broadcast_authenticate" translatable="false">meetingdoctors_authenticate</string>
-    <string name="meetingdoctors_local_broadcast_deauthenticate" translatable="false">meetingdoctors_deauthenticate</string>
-</resources>

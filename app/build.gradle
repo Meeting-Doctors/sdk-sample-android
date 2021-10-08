@@ -39,7 +39,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.meetingdoctors.chatmedico"
+        applicationId "com.meetingdoctors.sdksample"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -99,12 +99,9 @@ android {
 
 dependencies {
 
-    //implementation 'com.meetingdoctors:customer-chat-sdk:1.23.3'
-    implementation 'com.meetingdoctors:videocall-sdk:1.10.0'
+    implementation 'com.meetingdoctors:customer-chat-sdk:1.24.0'
+    implementation 'com.meetingdoctors:videocall-sdk:1.11.0'
     implementation 'com.meetingdoctors:meetingdoctors-security-sdk:1.1.0'
-
-    //MeetingDoctors Local Modules
-    implementation project(path: ':meetingdoctors-lib')
 
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
