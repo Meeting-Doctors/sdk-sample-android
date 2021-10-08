@@ -1,24 +1,15 @@
-package com.meetingdoctors.sdk_videocall_integration_sample.ui.activity
+package com.meetingdoctors.sdksample.ui.activity
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.meetingdoctors.chat.MeetingDoctorsClient
-import com.meetingdoctors.chat.MeetingDoctorsClient.OnVideoCallRequest
-import com.meetingdoctors.chat.data.Repository
 import com.meetingdoctors.chat.views.ProfessionalList.*
 import com.meetingdoctors.mdsecure.sharedpref.OnResetDataListener
-import com.meetingdoctors.sdk_videocall_integration_sample.BuildConfig
-import com.meetingdoctors.sdk_videocall_integration_sample.R
-import com.meetingdoctors.sdk_videocall_integration_sample.utils.MeetingDoctorsManager
-import com.meetingdoctors.videocall.VideoCallClient
-import com.meetingdoctors.videocall.VideoCallClient.login
-import com.meetingdoctors.videocall.VideoCallClient.requestCancelCallCustomer
-import com.meetingdoctors.videocall.VideoCallClient.requestOneToOneCall
+import com.meetingdoctors.sdksample.R
+import com.meetingdoctors.sdksample.utils.MeetingDoctorsManager
 import kotlinx.android.synthetic.main.layout_main_activity.*
 
 
@@ -52,6 +43,10 @@ class MainActivity : AppCompatActivity() {
          * interface, wich handles behavior for this concrete video call request type
          */
         MeetingDoctorsManager.setVideoCallRequestlistener()
+
+        refresh_list_button.setOnClickListener {
+            customer_sdk_professional_list?.refreshDoctorsList()
+        }
     }
 
     private fun setUpBottomNavigationBar() {

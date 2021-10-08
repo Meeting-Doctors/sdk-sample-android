@@ -1,7 +1,7 @@
-package com.meetingdoctors.sdk_videocall_integration_sample
+package com.meetingdoctors.sdksample
 
 import androidx.multidex.MultiDexApplication
-import com.meetingdoctors.sdk_videocall_integration_sample.utils.MeetingDoctorsManager
+import com.meetingdoctors.sdksample.utils.MeetingDoctorsManager
 
 
 class App: MultiDexApplication() {

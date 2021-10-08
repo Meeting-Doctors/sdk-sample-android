@@ -1,4 +1,4 @@
-package com.meetingdoctors.sdk_videocall_integration_sample.ui.activity
+package com.meetingdoctors.sdksample.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,9 +7,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.meetingdoctors.chat.MeetingDoctorsClient
-import com.meetingdoctors.sdk_videocall_integration_sample.BuildConfig
-import com.meetingdoctors.sdk_videocall_integration_sample.R
-import com.meetingdoctors.sdk_videocall_integration_sample.utils.MeetingDoctorsManager
+import com.meetingdoctors.sdksample.BuildConfig
+import com.meetingdoctors.sdksample.R
+import com.meetingdoctors.sdksample.utils.MeetingDoctorsManager
 import kotlinx.android.synthetic.main.activity_select_sdkoptions.*
 
 class SelectSDKOptionsActivity : AppCompatActivity() {

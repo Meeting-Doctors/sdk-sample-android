@@ -1,8 +1,8 @@
-package com.meetingdoctors.sdk_videocall_integration_sample.utils
+package com.meetingdoctors.sdksample.utils
 
 import com.meetingdoctors.chat.data.webservices.CustomerSdkBuildMode
-import com.meetingdoctors.sdk_videocall_integration_sample.BuildConfig.SDKCHAT_TARGET_ENVIRONMENT
-import com.meetingdoctors.sdk_videocall_integration_sample.BuildConfig.VIDEOCALL_TARGET_ENVIRONMENT
+import com.meetingdoctors.sdksample.BuildConfig.SDKCHAT_TARGET_ENVIRONMENT
+import com.meetingdoctors.sdksample.BuildConfig.VIDEOCALL_TARGET_ENVIRONMENT
 import com.meetingdoctors.videocall.api.VideoCallBuildMode
 
 object BuildModeHelper {

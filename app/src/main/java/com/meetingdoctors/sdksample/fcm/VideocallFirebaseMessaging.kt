@@ -1,10 +1,10 @@
-package com.meetingdoctors.sdk_videocall_integration_sample.fcm
+package com.meetingdoctors.sdksample.fcm
 
 import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.meetingdoctors.chat.MeetingDoctorsClient.Companion.instance
-import com.meetingdoctors.sdk_videocall_integration_sample.ui.activity.MainActivity
+import com.meetingdoctors.sdksample.ui.activity.MainActivity
 import com.meetingdoctors.videocall.fcm.MDVideoCallFirebaseMessagingService.Companion.onMessageReceived
 
 class VideocallFirebaseMessaging : FirebaseMessagingService() {

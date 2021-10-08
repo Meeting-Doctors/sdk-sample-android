@@ -1,25 +1,27 @@
-package com.meetingdoctors.sdk_videocall_integration_sample.utils
+package com.meetingdoctors.sdksample.utils
 
 import android.app.Activity
 import android.app.Application
 import android.content.Context
+import android.os.Build
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import com.meetingdoctors.chat.MeetingDoctorsClient
 import com.meetingdoctors.chat.data.Repository
-import com.meetingdoctors.sdk_videocall_integration_sample.BuildConfig.*
+import com.meetingdoctors.sdksample.BuildConfig.*
 
 import com.meetingdoctors.videocall.VideoCallClient
 import com.meetingdoctors.videocall.VideoCallClient.hasAssignedCall
 import com.meetingdoctors.videocall.VideoCallClient.hasProfessionalAssignedCall
+import java.util.*
 
 
-/**
- * Created by Héctor Manrique on 26/8/21.
- */
 object MeetingDoctorsManager : MeetingDoctorsClient.OnVideoCallRequest {
 
+    @RequiresApi(Build.VERSION_CODES.N)
     fun initializeChatSDK(application: Application) {
+        val locale: Locale = application.resources.configuration.locales.get(0)
         if (MeetingDoctorsClient.instance == null) {
             MeetingDoctorsClient.newInstance(
                 application = application,
@@ -27,7 +29,7 @@ object MeetingDoctorsManager : MeetingDoctorsClient.OnVideoCallRequest {
                 targetEnvironment = BuildModeHelper.setCustomerSdkEnvironment(SDKCHAT_TARGET_ENVIRONMENT),
                 isSharedPreferencesEncrypted = true,
                 encryptionpassword = ENCRYPTION_PASSWORD,
-                locale = null
+                locale = locale
             )
 
             MeetingDoctorsClient.instance?.setCollegiateNumbersVisibility(true)
