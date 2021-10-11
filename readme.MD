@@ -18,14 +18,14 @@ The only action need to do by developer side is to configure the user token and 
 to code, but its recommended to set environment variables from Local.properties file created inside project. Environment variables
 must have following names:
 
-API_KEY=<YOUR_API_KEY>
-USER_TOKEN=<YOUR_USER_TOKEN>
+- API_KEY=<YOUR_API_KEY>
+- USER_TOKEN=<YOUR_USER_TOKEN>
 
 This way the project acces directly this properties & configure SDK's initialization automatically.
 
 It is recommended too to configure an encryption password for SharedPreferences security, this variable must have the following name:
 
-sharedPreferencesEncryptionPass=<YOUR_ENCRYPTION_PASSWORD>
+- sharedPreferencesEncryptionPass=<YOUR_ENCRYPTION_PASSWORD>
 
 That's all the configuration needed by developer side.
 
