@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Sdk-videocall-integration-sample</string>
+    <string name="app_name">Chat+VC integration sample</string>
+    <string name="chat_with_professionals">Chat with professionals</string>
+    <string name="videocall_pull">Videocall pull</string>
 </resources>
