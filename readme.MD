@@ -9,10 +9,10 @@ an initial screen with 2 options is show:
   permissions, run a Videocall 1-to-1 request process with the professional you choose. You can choose this option from toolbar menu,
   located at right top corner inside chat screen.
 
-  You will see a bottom navigation bar, with two options:
-        * Medical History
-        * Logout action: This action will logout/deauthenticate your user from SDK's and will return to inital Screen to start again
-          videocall pool request or enter again to professional list chat screen.
+You will see a bottom navigation bar, with two options:
+
+- Medical History
+- Logout action: This action will logout/deauthenticate your user from SDK's and will return to inital Screen to start again videocall pool request or enter again to professional list chat screen.
 
 The only action need to do by developer side is to configure the user token and your company Api key. You can hardcode them directly
 to code, but its recommended to set environment variables from Local.properties file created inside project. Environment variables
