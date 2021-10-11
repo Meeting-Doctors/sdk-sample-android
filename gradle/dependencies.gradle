@@ -1,0 +1,162 @@
+ext.versions = [
+        android         : [
+                kotlin    : '1.3.11',
+                gradle    : '3.1.3',
+                constraint: '1.1.2',
+                livedata  : '1.1.1',
+                test      : '0.5'
+        ],
+
+        google          : [
+                gson: '2.8.5',
+                play: [
+                        services: '17.1.01',
+                        gcm: '17.0.0'
+                ],
+                firebase_bom        : '26.1.1',
+                firebase_messaging  : '22.0.0'
+        ],
+
+        glide           : '4.11.0',
+
+        rx              : [
+                java   : '2.1.3',
+                android: '2.0.1',
+                kotlin : '2.1.0'
+        ],
+
+        square          : [
+                okhttp  : '4.9.1',
+                retrofit: '2.5.0',
+                moshi   : '1.8.0'
+        ],
+
+        koin            : '1.0.2',
+
+        monarchy        : '0.4.3',
+
+        scale_image_view: '3.9.0',
+
+        amazon          : '2.7.2',
+
+        prettytime      : '4.0.1.Final',
+
+        test            : [
+                junit         : '4.12',
+                hamkrest      : '1.4.2.2',
+                mockito       : '2.15.0',
+                mockito_kotlin: '1.5.0',
+                buttons       : '1.1.0',
+                robolectric   : '4.0.2'
+        ]
+]
+
+ext.libraries = [
+        android         : [
+                kotlin   : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.android.kotlin",
+                support  : [
+                        compat      : 'androidx.appcompat:appcompat:1.0.0',
+                        annotations : "androidx.annotation:annotation:1.1.0",
+                        design      : 'com.google.android.material:material:1.0.0',
+                        cardview    : 'androidx.cardview:cardview:1.0.0',
+                        recyclerview: 'androidx.recyclerview:recyclerview:1.0.0',
+                        percent     : "com.android.support:percent:$versions.android.support",
+                        constraint  : "com.android.support.constraint:constraint-layout:$versions.android.constraint",
+                        multidex    : 'androidx.multidex:multidex:2.0.0',
+                        test        : [
+                                runner  : "com.android.support.test:runner:$versions.android.test",
+                                rules   : "com.android.support.test:rules:$versions.android.test",
+                                espresso: dependencies.create('com.android.support.test.espresso:espresso-core:3.0.1') {
+                                    exclude group: 'com.android.support', module: 'support-annotations'
+                                    exclude group: 'com.android.support', module: 'support-v4'
+                                    exclude group: 'com.android.support', module: 'support-v13'
+                                    exclude group: 'com.android.support', module: 'recyclerview-v7'
+                                    exclude group: 'com.android.support', module: 'appcompat-v7'
+                                    exclude group: 'com.android.support', module: 'design'
+                                }
+                        ]
+                ],
+                lifecycle: [
+                        extensions     : "android.arch.lifecycle:extensions:$versions.android.livedata",
+                        reactivestreams: "android.arch.lifecycle:reactivestreams:$versions.android.livedata",
+                        compiler       : "android.arch.lifecycle:compiler:$versions.android.livedata"
+                ]
+        ],
+
+        google          : [
+                gson    : "com.google.code.gson:gson:$versions.google.gson",
+                play    : [
+                        base: "com.google.android.gms:play-services-base:$versions.google.play.services",
+                        gcm : "com.google.android.gms:play-services-gcm:$versions.google.play.gcm"
+                ],
+                firebase: [
+                        bom: "com.google.firebase:firebase-bom:$versions.google.firebase_bom",
+                        messaging: dependencies.create("com.google.firebase:firebase-messaging:$versions.google.firebase_messaging") {
+                            // Ensures a common support version.
+                            exclude group: 'com.android.support', module: 'support-v4'
+                        }
+                ]
+        ],
+
+        rx              : [
+                java   : "io.reactivex.rxjava2:rxjava:${versions.rx.java}",
+                android: "io.reactivex.rxjava2:rxandroid:${versions.rx.android}",
+                kotlin : "io.reactivex.rxjava2:rxkotlin:${versions.rx.kotlin}"
+        ],
+
+        glide           : "com.github.bumptech.glide:glide:$versions.glide",
+
+        square          : [
+                okhttp  : [
+                        core   : "com.squareup.okhttp3:okhttp:$versions.square.okhttp",
+                        logging: "com.squareup.okhttp3:logging-interceptor:$versions.square.okhttp",
+                        mock   : "com.squareup.okhttp3:mockwebserver:$versions.square.okhttp",
+                ],
+                retrofit: [
+                        core           : "com.squareup.retrofit2:retrofit:${versions.square.retrofit}",
+                        converter_moshi: "com.squareup.retrofit2:converter-moshi:${versions.square.retrofit}",
+                        converter_gson : "com.squareup.retrofit2:converter-gson:${versions.square.retrofit}",
+                        rx_adapter     : "com.squareup.retrofit2:adapter-rxjava2:${versions.square.retrofit}"
+                ]
+
+        ],
+
+        koin            : [
+                core             : "org.koin:koin-core:$versions.koin",
+                android          : "org.koin:koin-android:$versions.koin",
+                android_scope    : "org.koin:koin-android-scope:$versions.koin",
+                android_viewmodel: "org.koin:koin-android-viewmodel:$versions.koin",
+                test             : "org.koin:koin-test:$versions.koin"
+        ],
+
+        socket          : dependencies.create('io.socket:socket.io-client:1.0.0') {
+            // excluding org.json which is provided by Android
+            exclude group: 'org.json', module: 'json'
+        },
+
+        monarchy        : "com.github.Zhuinden:realm-monarchy:$versions.monarchy",
+
+        scale_image_view: "com.davemorrissey.labs:subsampling-scale-image-view:$versions.scale_image_view",
+
+        amazon          : [
+                core: "com.amazonaws:aws-android-sdk-core:$versions.amazon",
+                s3  : "com.amazonaws:aws-android-sdk-s3:$versions.amazon",
+        ],
+
+        prettytime      : "org.ocpsoft.prettytime:prettytime:$versions.prettytime",
+
+        test            : [
+                junit          : "junit:junit:$versions.test.junit",
+                hamkrest       : "com.natpryce:hamkrest:$versions.test.hamkrest",
+                mockito_core   : "org.mockito:mockito-core:${versions.test.mockito}",
+                mockito_android: "org.mockito:mockito-android:${versions.test.mockito}",
+                mockito_kotlin : "com.nhaarman:mockito-kotlin:$versions.test.mockito_kotlin",
+                android_core   : "android.arch.core:core-testing:${versions.android.livedata}",
+                buttons        : "com.21buttons:fragment-test-rule:${versions.test.buttons}",
+                buttons_extras : "com.21buttons:fragment-test-rule-extras:${versions.test.buttons}",
+                robolectric    : [
+                        core   : "org.robolectric:robolectric:$versions.test.robolectric",
+                        support: "org.robolectric:shadows-support-v4:$versions.test.robolectric"
+                ]
+        ]
+]

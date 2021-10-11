@@ -1,4 +1,4 @@
-package com.meetingdoctors.sdk_videocall_integration_sample
+package com.meetingdoctors.sdksample
 
 import org.junit.Test
 
