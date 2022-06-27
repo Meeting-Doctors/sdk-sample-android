@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="@id/refresh_list_banner" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.meetingdoctors.chat.views.ProfessionalList
+    <com.meetingdoctors.chat.views.professionallilst.ProfessionalList
         android:id="@+id/customer_sdk_professional_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"

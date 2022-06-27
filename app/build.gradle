@@ -99,8 +99,8 @@ android {
 
 dependencies {
 
-    implementation 'com.meetingdoctors:customer-chat-sdk:1.24.0'
-    implementation 'com.meetingdoctors:videocall-sdk:1.11.0'
+    implementation 'com.meetingdoctors:customer-chat-sdk:1.32.4'
+    implementation 'com.meetingdoctors:videocall-sdk:1.16.0'
     implementation 'com.meetingdoctors:meetingdoctors-security-sdk:1.1.0'
 
 

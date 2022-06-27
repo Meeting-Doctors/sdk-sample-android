@@ -6,7 +6,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.meetingdoctors.chat.MeetingDoctorsClient
-import com.meetingdoctors.chat.views.ProfessionalList.*
+import com.meetingdoctors.chat.views.professionallilst.ProfessionalList.*
+import com.meetingdoctors.chat.views.professionallilst.ProfessionalListener
 import com.meetingdoctors.mdsecure.sharedpref.OnResetDataListener
 import com.meetingdoctors.sdksample.R
 import com.meetingdoctors.sdksample.utils.MeetingDoctorsManager
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         MeetingDoctorsManager.setVideoCallRequestlistener()
 
         refresh_list_button.setOnClickListener {
-            customer_sdk_professional_list?.refreshDoctorsList()
+            customer_sdk_professional_list?.refreshList()
         }
     }
 
@@ -78,10 +79,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun setProfessionalListener() {
         customer_sdk_professional_list?.setProfessionalListListener(object :
-            ProfessionalListListener {
+            ProfessionalListener {
             override fun onProfessionalClick(
                 professionalId: Long,
-                speciality: String?,
+                speciality: String,
                 hasAccess: Boolean,
                 isSaturated: Boolean
             ): Boolean {

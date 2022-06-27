@@ -54,7 +54,8 @@ object MeetingDoctorsManager : MeetingDoctorsClient.OnVideoCallRequest {
                 override fun onInitSuccess() {
                     videocallLogin(activity, makeVideocallRequest)
                 }
-            })
+            },
+        locale = null)
     }
 
     private fun videocallLogin(activity: Activity, launchVideocallRequest: Boolean = false) {
@@ -119,7 +120,10 @@ object MeetingDoctorsManager : MeetingDoctorsClient.OnVideoCallRequest {
                                     videoCallRequestDoneListener?.performRequestDoneAction(roomId)
                                 }
 
-                                override fun onRequestOneToOneCallCancelledPrevious(roomId: String) {
+                                override fun onRequestOneToOneCallCancelledPrevious(
+                                    roomId: String,
+                                    professionalHash: String?
+                                ) {
                                     Log.d(
                                         "perform1to1VideoCall",
                                         "VideoCall Previous Request Cancelled"
