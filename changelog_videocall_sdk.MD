@@ -1,6 +1,9 @@
 CHANGELOG
 ------------------------
 
+*** 1.18.0 (10 Oct 2022)
+        - Android Api Migration to Api 31
+
 *** 1.17.1 (27 Sep 2022)
         - Fix indicator camera Android 12
 
