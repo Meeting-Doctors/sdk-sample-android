@@ -1,5 +1,20 @@
 CHANGELOG
 ------------------------
+*** 3.0.1 (30 Jun 2023)
+- Add new status assigned to VideoCall
+- Fixes when the network is poor or out
+
+*** 3.0.0 (7 Jun 2023)
+- New VideoCall experience
+
+*** 1.20.0 (24 Feb 2023)
+- Added 1080P support for VideoCall
+
+*** 1.19.1 (12 Jan 2023)
+- Fix missing permission READ_PHONE_STATE request for API 31 target
+
+*** 1.19.0 (29 Nov 2022)
+- Deleted existing Mediquo references(replaced by meetingdoctors_vc references)
 
 *** 1.18.0 (10 Oct 2022)
         - Android Api Migration to Api 31
