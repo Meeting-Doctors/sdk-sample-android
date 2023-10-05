@@ -1,5 +1,12 @@
 CHANGELOG
 ------------------------
+*** 3.0.3 (28 Sep 2023)
+- Exclude play-services-ads-identifier
+- Add in Manifest permission gms.permission.AD_ID" tools:node="remove" 
+
+*** 3.0.2 (28 Sep 2023)
+- Exclude play-services-ads-identifier
+
 *** 3.0.1 (30 Jun 2023)
 - Add new status assigned to VideoCall
 - Fixes when the network is poor or out
