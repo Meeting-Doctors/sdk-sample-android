@@ -1,18 +1,30 @@
 CHANGELOG
 ------------------------
-*** 3.0.3 (28 Sep 2023)
-- Exclude play-services-ads-identifier
-- Add in Manifest permission gms.permission.AD_ID" tools:node="remove" 
+## 3.0.5 (10 Nov 2023)
+### Added
+    - Fix some issues with openTok framework
 
-*** 3.0.2 (28 Sep 2023)
-- Exclude play-services-ads-identifier
+## 3.0.4 (20 Oct 2023)
+### Added
+    - Add expiryTime in VC request
 
-*** 3.0.1 (30 Jun 2023)
-- Add new status assigned to VideoCall
-- Fixes when the network is poor or out
+## 3.0.3 (28 Sep 2023)
+### Added
+     - Exclude play-services-ads-identifier
+     - Add in Manifest permission gms.permission.AD_ID" tools:node="remove"
 
-*** 3.0.0 (7 Jun 2023)
-- New VideoCall experience
+## 3.0.2 (28 Sep 2023)
+### Added
+     - Exclude play-services-ads-identifier
+
+## 3.0.1 (30 Jun 2023)
+### Added
+     - Add new status assigned to VideoCall
+     - Fixes when the network is poor or out
+
+## 3.0.0 (7 Jun 2023)
+### Added
+      - New VideoCall experience
 
 *** 1.20.0 (24 Feb 2023)
 - Added 1080P support for VideoCall
