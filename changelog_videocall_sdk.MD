@@ -1,5 +1,9 @@
 CHANGELOG
 ------------------------
+## 3.0.6 (17 Nov 2023)
+### Added
+    - Fix login issue with null fields
+    
 ## 3.0.5 (10 Nov 2023)
 ### Added
     - Fix some issues with openTok framework
