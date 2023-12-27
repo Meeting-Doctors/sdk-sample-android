@@ -12,7 +12,8 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.Sdkvideocallintegrationsample"
         tools:targetApi="r">
-        <activity android:name=".ui.activity.SelectSDKOptionsActivity">
+        <activity android:name=".ui.activity.SelectSDKOptionsActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +28,8 @@
             tools:ignore="LockedOrientationActivity">
         </activity>
 
-        <service android:name=".fcm.VideocallFirebaseMessaging">
+        <service android:name=".fcm.VideocallFirebaseMessaging"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

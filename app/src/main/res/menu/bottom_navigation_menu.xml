@@ -3,7 +3,7 @@
     <item
         android:id="@+id/medicalHistory"
         android:enabled="true"
-        android:icon="@drawable/mediquo_ic_medical_history"
+        android:icon="@drawable/meetingdoctors_ic_medical_history"
         android:iconTint="@android:color/white"
         android:title="@string/meetingdoctors_medical_history_title"/>
     <item

@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.meetingdoctors.chat.MeetingDoctorsClient
 import com.meetingdoctors.chat.data.Repository
+import com.meetingdoctors.chat.data.Speciality
 import com.meetingdoctors.sdksample.BuildConfig.*
 
 import com.meetingdoctors.videocall.VideoCallClient
@@ -27,8 +28,8 @@ object MeetingDoctorsManager : MeetingDoctorsClient.OnVideoCallRequest {
                 application = application,
                 apiKey = YOUR_API_KEY,
                 targetEnvironment = BuildModeHelper.setCustomerSdkEnvironment(SDKCHAT_TARGET_ENVIRONMENT),
-                isSharedPreferencesEncrypted = true,
-                encryptionpassword = ENCRYPTION_PASSWORD,
+                encryptionEnabled = true,
+                encryptionPassword = ENCRYPTION_PASSWORD,
                 locale = locale
             )
 
@@ -78,21 +79,7 @@ object MeetingDoctorsManager : MeetingDoctorsClient.OnVideoCallRequest {
     }
 
     private fun makeVideoCallRequest(activity: Activity) {
-        VideoCallClient.openCall(activity,
-            object : VideoCallClient.RequestCallResponseListener {
-
-                override fun onRequestCallSuccess(roomId: String?, hash: String?) {
-                    /* Your code here */
-                    Log.d("VIDEOCALL", "request success")
-
-                }
-
-                override fun onRequestCallFailure(message: String?) {
-                    /* Your code here */
-                    Log.d("VIDEOCALL", "request failed $message")
-
-                }
-            })
+        VideoCallClient.openCall(activity)
     }
 
     fun setVideoCallRequestlistener() {
@@ -102,6 +89,8 @@ object MeetingDoctorsManager : MeetingDoctorsClient.OnVideoCallRequest {
     override fun perform1to1VideoCall(
         professionalHash: String?,
         doctorName: String?,
+        avatar: String?,
+        speciality: String?,
         context: Context?,
         videoCallRequestDoneListener: MeetingDoctorsClient.OnVideoCall1to1RequestDone?
     ) {
@@ -111,9 +100,11 @@ object MeetingDoctorsManager : MeetingDoctorsClient.OnVideoCallRequest {
                 object : VideoCallClient.LoginResponseListener {
                     override fun onLoginSuccess() {
                         VideoCallClient.requestOneToOneCall(
-                            context!!,
+                            context!! as Activity,
                             professionalHash!!,
                             doctorName,
+                            avatar,
+                            speciality.toString(),
                             object : VideoCallClient.RequestOneToOneCallListener {
                                 override fun onRequestOneToOneCallSuccess(roomId: String) {
                                     Log.d("perform1to1VideoCall", "VideoCall Request Performed")
@@ -158,7 +149,7 @@ object MeetingDoctorsManager : MeetingDoctorsClient.OnVideoCallRequest {
         videoCallRequestDoneListener: MeetingDoctorsClient.OnVideoCall1to1RequestDone?,
         doctorName: String?
     ) {
-        VideoCallClient.requestCancelCallCustomer(context!!, doctorName!!, object :
+        VideoCallClient.requestCancelCallCustomer(object :
             VideoCallClient.CancelCallResponseListener {
             override fun onCancelCallSuccess() {
                 Log.i("VideoCallClient", "cancel Request Call SUCCESS")

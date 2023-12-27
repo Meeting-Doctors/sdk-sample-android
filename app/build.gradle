@@ -35,13 +35,13 @@ android {
             keyAlias 'sdkIntegrationSample'
         }
     }
-    compileSdkVersion 30
+    compileSdkVersion 33
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.meetingdoctors.sdksample"
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -99,9 +99,9 @@ android {
 
 dependencies {
 
-    implementation 'com.meetingdoctors:customer-chat-sdk:1.39.5'
-    implementation 'com.meetingdoctors:videocall-sdk:1.18.0'
-    implementation 'com.meetingdoctors:meetingdoctors-security-sdk:1.1.0'
+    implementation 'com.meetingdoctors:customer-chat-sdk:1.43.7'
+    implementation 'com.meetingdoctors:videocall-sdk:3.0.6'
+    //implementation 'com.meetingdoctors:meetingdoctors-security-sdk:1.1.0'
 
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

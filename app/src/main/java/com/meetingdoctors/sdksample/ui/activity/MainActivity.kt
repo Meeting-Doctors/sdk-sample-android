@@ -8,7 +8,6 @@ import com.google.android.material.snackbar.Snackbar
 import com.meetingdoctors.chat.MeetingDoctorsClient
 import com.meetingdoctors.chat.views.professionallilst.ProfessionalList.*
 import com.meetingdoctors.chat.views.professionallilst.ProfessionalListener
-import com.meetingdoctors.mdsecure.sharedpref.OnResetDataListener
 import com.meetingdoctors.sdksample.R
 import com.meetingdoctors.sdksample.utils.MeetingDoctorsManager
 import kotlinx.android.synthetic.main.layout_main_activity.*
@@ -58,14 +57,13 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.logout -> {
-                    MeetingDoctorsClient.instance?.deauthenticate(object : OnResetDataListener {
+                    MeetingDoctorsClient.instance?.deauthenticate(object :
+                        MeetingDoctorsClient.OnResetDataListener {
                         override fun dataResetError(exception: Exception?) {
-                            super.dataResetError(exception)
                             showError("Error at logout")
                         }
 
                         override fun dataResetSuccessFul() {
-                            super.dataResetSuccessFul()
                             finish()
                         }
                     })
