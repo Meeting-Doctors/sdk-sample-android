@@ -1,5 +1,103 @@
 CHANGELOG
 ------------------------
+## 1.43.8 (8 Jan 2024)
+### Added
+    - Add new banner when professional is busy
+## 1.43.7 (19 Dic 2023)
+### Added
+    - New encryption mode
+    - Add flag to disable the notification permission checking
+## 1.43.5 (14 Dic 2023)
+### Added
+    - Added deeplink check when the professional is not available
+    - Add keep annotation on Html banner classes for release build
+## 1.43.4 (12 Dic 2023)
+### Added
+    - Set unread messages badge color
+    - Set Color for professional speciality text in professional list
+    -  Set Color for outgoing background message
+    - Set Color for outgoing text message
+    - Set Color for outgoing time message
+    - Set Color for incoming text message
+    - Set Color for incoming time message
+## 1.43.3 (8 Nov 2023)
+### Added
+    - Add function to force a authenticate. Delete pushToken when a register a new one 
+## 1.43.2 (31 Oct 2023)
+### Added
+    - Add fix for floating button black icon
+## 1.43.1 (24 Oct 2023)
+### Added
+    - Minor design fixes
+## 1.43.0 (20 Oct 2023)
+### Added
+    - Embedded link navigation in chat
+    - Notification permission handle
+    - Add html banner on professionalList
+    - Add webview view
+## 1.41.6 (27 Sep 2023)
+### Added
+    - Fix Disease and Medication adapter
+## 1.41.5 (8 Ago 2023)
+### Added
+    - Visual fixes
+## 1.41.4 (8 Ago 2023)
+### Added
+    - Change paramter of funtion to open Chat with pre typed message
+## 1.41.3 (8 Ago 2023)
+### Added
+    - Pre typed message in Chat screen
+## 1.41.2 (24 Jul 2023)
+### Added
+    - Set primary color, message background color, set disabled professional color
+## 1.41.1 (14 Jul 2023)
+### Added
+    - Launch Professional List Screen
+    - Add functions onFirebaseMessageReceived and onNotificationDataReceived
+## 1.41.0 (13 Jun 2023)
+### Added
+    - Fix: Allergy slider
+
+## 1.40.9 (7 Jun 2023)
+### Added
+    - Banner views can be updated
+
+## 1.40.8 (11 May 2023)
+### Added
+    - UI restyling for FAB Plus icon
+
+## 1.40.7 (20 Apr 2023)
+### Added
+    - Fix: Support file attachment for API 33
+
+## 1.40.6 (21 Mar 2023)
+### Added
+    - Fix: Design for professional list
+
+## 1.40.5 (16 Mar 2023)
+### Added
+    - Fix: Counter character for details in Medical History
+
+## 1.40.4 (20 Feb  2023)
+### Added
+    - Fix: prevent message list's dissapearing when user attaches a file
+
+## 1.40.3 (8 Feb  2023)
+### Added
+    - Add email parameter for missing info form
+
+## 1.40.2 (12 Jan  2023)
+### Added
+    - Fix for ProfessionalList(onLayout() React Native implementation avoided)
+    - Avoid nullabillity issue for VideoCallRequest interface
+
+## 1.40.1 (20 Dic 2022)
+### Added
+    - Fix check videocall enabled for Medical History Reports
+
+## 1.40.0 (29 Nov 2022)
+### Added
+    - Deleted existing Mediquo references(replaced by meetingdoctors_ references)
 ## 1.39.5 (03 Nov 2022)
 ### Added
     - Fix hide divider on Professional List
