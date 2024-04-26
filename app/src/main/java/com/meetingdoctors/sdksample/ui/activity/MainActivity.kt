@@ -6,11 +6,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.meetingdoctors.chat.MeetingDoctorsClient
-import com.meetingdoctors.chat.views.professionallilst.ProfessionalList.*
-import com.meetingdoctors.chat.views.professionallilst.ProfessionalListener
+import com.meetingdoctors.chat.views.professionallist.ProfessionalListFragment
+import com.meetingdoctors.chat.views.professionallist.ProfessionalListener
 import com.meetingdoctors.sdksample.R
 import com.meetingdoctors.sdksample.utils.MeetingDoctorsManager
-import kotlinx.android.synthetic.main.layout_main_activity.*
+import kotlinx.android.synthetic.main.layout_main_activity.bottom_navigation
+import kotlinx.android.synthetic.main.layout_main_activity.refresh_list_button
+import kotlinx.android.synthetic.main.layout_main_activity.rootLayout
 
 
 class MainActivity : AppCompatActivity() {
@@ -23,9 +25,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private var professionalList: ProfessionalListFragment? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_main_activity)
+
+        professionalList =
+            supportFragmentManager.findFragmentById(R.id.customer_sdk_professional_list) as ProfessionalListFragment?
 
         /**
          * Integrator can listen for some useful callbacks
@@ -45,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         MeetingDoctorsManager.setVideoCallRequestlistener()
 
         refresh_list_button.setOnClickListener {
-            customer_sdk_professional_list?.refreshList()
+            professionalList?.refreshList()
         }
     }
 
@@ -76,7 +83,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun setProfessionalListener() {
-        customer_sdk_professional_list?.setProfessionalListListener(object :
+        professionalList?.setProfessionalListListener(object :
             ProfessionalListener {
             override fun onProfessionalClick(
                 professionalId: Long,

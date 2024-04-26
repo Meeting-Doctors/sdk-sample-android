@@ -28,10 +28,11 @@
             android:visibility="gone"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.meetingdoctors.chat.views.professionallilst.ProfessionalList
+    <fragment
         android:id="@+id/customer_sdk_professional_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:name="com.meetingdoctors.chat.views.professionallist.ProfessionalListFragment"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
