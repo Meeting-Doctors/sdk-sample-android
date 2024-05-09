@@ -10,12 +10,14 @@ import com.meetingdoctors.chat.views.professionallist.ProfessionalListFragment
 import com.meetingdoctors.chat.views.professionallist.ProfessionalListener
 import com.meetingdoctors.sdksample.R
 import com.meetingdoctors.sdksample.utils.MeetingDoctorsManager
+import com.meetingdoctors.sdksample.BuildConfig.*
+import com.meetingdoctors.videocall.VideoCallClient
 import kotlinx.android.synthetic.main.layout_main_activity.bottom_navigation
 import kotlinx.android.synthetic.main.layout_main_activity.refresh_list_button
 import kotlinx.android.synthetic.main.layout_main_activity.rootLayout
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MeetingDoctorsClient.OnVideoCallRequest {
 
     companion object {
 
@@ -116,4 +118,69 @@ class MainActivity : AppCompatActivity() {
     private fun showError(message: String) {
         Snackbar.make(rootLayout, message, Snackbar.LENGTH_LONG).show()
     }
+
+    override fun hasProfessionalAssignedVideoCall(professionalHash: String?): Boolean {
+        return VideoCallClient.hasAssignedCall() && VideoCallClient.hasProfessionalAssignedCall(
+            professionalHash.toString()
+        )
+    }
+
+    override fun perform1to1VideoCall(
+        professionalHash: String?,
+        doctorName: String?,
+        avatar: String?,
+        speciality: String?,
+        context: Context?,
+        videoCallRequestDoneListener: MeetingDoctorsClient.OnVideoCall1to1RequestDone?
+    ) {
+        VideoCallClient.login(YOUR_TOKEN, object : VideoCallClient.LoginResponseListener{
+
+            override fun onLoginSuccess() {
+                VideoCallClient.requestOneToOneCall(this@MainActivity,professionalHash!!,doctorName,avatar,speciality!!,object : VideoCallClient.RequestOneToOneCallListener{
+
+                    override fun onRequestOneToOneCallSuccess(roomId: String) {
+                        videoCallRequestDoneListener?.performRequestDoneAction(roomId)
+                    }
+
+                    override fun onRequestOneToOneCallCancelledPrevious(
+                        roomId: String,
+                        professionalHash: String?
+                    ) {
+                        videoCallRequestDoneListener?.performSendCancelledCallMessage(roomId,professionalHash)
+                    }
+
+                    override fun onRequestOneToOneCallFailure(message: String?) {
+
+                    }
+
+                })
+            }
+
+            override fun onLoginFailure(message: String?) {
+                /* Your code here */
+            }
+
+        })
+    }
+
+    override fun performCancelVideoCall(
+        context: Context?,
+        message: String?,
+        videoCallRequestDoneListener: MeetingDoctorsClient.OnVideoCall1to1RequestDone?,
+        doctorName: String?
+    ) {
+        VideoCallClient.requestCancelCallCustomer(object : VideoCallClient.CancelCallResponseListener{
+
+            override fun onCancelCallSuccess() {
+                videoCallRequestDoneListener?.performRequestCancelledAction()
+            }
+
+            override fun onCancelCallFailure(message: String?) {
+
+            }
+
+        })
+    }
+
+
 }
